@@ -1,0 +1,12 @@
+Copyright © 2024 ProgAndy
+
+keyboard.h and layout.mobintl.h are licensed by John Sullivan 
+<jsullivan@csumb.edu> under the GPL v3.0 license as part of wvkbd. 
+Unused elements have been removed from keyboard.h
+
+The framework for the gtklock plugin has been copied from the
+gtklock-playerctl-module by Jovan Lanik which is also licensed under
+the GPL v3.0 license.
+
+All code in this repository falls under the terms of the GPL v3.0 license,
+which can be found in LICENSE.
