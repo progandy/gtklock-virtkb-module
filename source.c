@@ -97,8 +97,13 @@ static void key_pressed(GtkWidget *button, gpointer user_data) {
         }
         create_keys(win, VIRTUAL_KEYBOARD(win)->current_layout);
       } else {
-        g_signal_emit_by_name((GTK_ENTRY(win->input_field)), "insert-at-cursor",
-                              key_data->label);
+        if (key_data->code == KEY_SPACE) {
+          g_signal_emit_by_name((GTK_ENTRY(win->input_field)),
+                "insert-at-cursor", " ");
+        } else {
+          g_signal_emit_by_name((GTK_ENTRY(win->input_field)),
+                "insert-at-cursor", key_data->label);
+        }
       }
     }
   } else if (key_data->type == BackLayer) {
